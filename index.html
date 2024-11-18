@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Mate+SC:wght@400&family=Tiro+Tamil:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   </head>
+<body>
+   <!----------------------------------Header-------------------------------->
+
+   <header>
+      <a href="#" class="logo">BINGE NEST</a>
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon ri-home-4-line"></i></a></li>
+          <li><a href="series.html">SERIES</a></li>
+          <li><a href="movies.html">MOVIES</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="login.html">LOGIN </a></li>
+        </ul>
+        <div class="search">
+          <input type="text" placeholder="search">
+          <i class="icon ri-search-2-line"></i>
+        </div>
+   </header>
+
+   <!---------------------------------Banner----------------------------------->
+
+   <div class="banner">
+      <div class="content active">
+        <img src="image/witcher-title-3-Photoroom.png" alt="image" class="movie-title">
+        <h4>
+          <span>2019</span>
+          <span> 8 / 10 </span>
+          <span>3 Seasons</span>
+          <span>Fantasy Epic</span>
+        </h4>
+        <p>The Witcher is a fantasy drama series based on Andrzej Sapkowskis book series of the same name. The story follows Geralt of Rivia, a monster hunter for hire known as a Witcher, as he navigates a dangerous world filled with magic, political intrigue, and moral ambiguity. Alongside Geralt are two pivotal characters: Yennefer of Vengerberg, a powerful sorceress, and Princess Ciri, a girl with a mysterious destiny tied to Geralt.Set in the Continent, a land of warring kingdoms and ancient secrets, the series explores themes of destiny, love, and the struggle between good and evil. Geralt’s adventures are marked by epic battles with mythical creatures, complex relationships, and the search for purpose in a chaotic world. With its gritty tone, captivating storylines, and rich lore, The Witcher has become a standout fantasy series, offering viewers a thrilling blend of action and drama. </p>
+        <div class="button">
+          <a href="https://www.netflix.com/in/title/80189685" target="_blank" class="watch"><i class="ri-play-fill">Watch</i></a>
+          <a href="#"><i class="ri-play-list-add-line"> add playlist</i></a><br><br>
+        </div>
+      </div>  
+        <div class="carousel-box">
+
+          <div class="carousel">
+              <div class="carousel-item" data-watch="https://www.netflix.com/in/title/80189685" 
+                                            onclick="changeContent( 'witcher-bg.jpg',      //   <= background-image
+                                                                  'image/witcher-title-3-Photoroom.png',     //     <= title image
+                                                                  'video/witcher-trailer.mp4',    //       <= trailer video
+                                                                  '2019',          //       <= span 1 = series year
+                                                                  '8 / 10',      //        <= span 2 = rating
+                                                                  '3 Seasons',    //          <= span 3 = number of seasons
+                                                                  'Fantasy Epic', //             <=   span 4 = Genre
+                                                                  'The Witcher is a fantasy drama series based on Andrzej Sapkowskis book series of the same name. The story follows Geralt of Rivia, a monster hunter for hire known as a Witcher, as he navigates a dangerous world filled with magic, political intrigue, and moral ambiguity. Alongside Geralt are two pivotal characters: Yennefer of Vengerberg, a powerful sorceress, and Princess Ciri, a girl with a mysterious destiny tied to Geralt.Set in the Continent, a land of warring kingdoms and ancient secrets, the series explores themes of destiny, love, and the struggle between good and evil. Geralt’s adventures are marked by epic battles with mythical creatures, complex relationships, and the search for purpose in a chaotic world. With its gritty tone, captivating storylines, and rich lore, The Witcher has become a standout fantasy series, offering viewers a thrilling blend of action and drama.') //  <= Discription 
+                                                                  updateWatchLink(this)">
+               <img src="image/witcher-carousel.png" alt="image">
+              </div>
+              <div class="carousel-item" data-watch="https://www.jiocinema.com/tv-shows/game-of-thrones/3739477" 
+                                          onclick="changeContent('got-bg-2.jpg',
+                                                                'image/got-title-photoroom.png',
+                                                                'video/got-trailer.mp4',
+                                                                '2011',
+                                                                '9.2 / 10',
+                                                                '8 Seasons',
+                                                                'Dark Fantasy',
+                                                                'Game of Thrones is an epic fantasy drama series based on George R.R. Martins A Song of Ice and Fire novels. Set in the fictional continents of Westeros and Essos, it follows the struggle for power among noble families as they vie for control of the Iron Throne. The story weaves together political intrigue, betrayal, and war, with fantastical elements like dragons, magic, and the looming threat of the undead White Walkers.Themes of loyalty, ambition, and morality are explored as alliances shift and rivalries escalate. Known for its unpredictable plot twists and shocking moments, Game of Thrones captivated audiences with its rich world-building, complex characters, and epic battles.The series features a vast ensemble cast, including iconic characters like Jon Snow, Daenerys Targaryen, Tyrion Lannister, and Arya Stark.')
+                                                                updateWatchLink(this)">
+                <img src="image/got-carousel.png" alt="image">
+              </div>
+              <div class="carousel-item" data-watch="https://www.netflix.com/in/title/80100172"
+                                          onclick="changeContent('dark-bg-1.webp',
+                                                                'image/dark-title-5-Photoroom.png',
+                                                                'video/dark-trailer.mp4',
+                                                                '2017',
+                                                                '8.7 / 10',
+                                                                '3 Seasons',
+                                                                'Time Travel',
+                                                                'Dark is a German sci-fi thriller series set in the small town of Winden, where the disappearance of two children reveals a tangled web of secrets. The story spans four generations, exploring the interconnected lives of four families—the Kahnwalds, Nielsens, Dopplers, and Tiedemanns. At its core, the series delves into time travel, fate, and the impact of actions across past, present, and future.The narrative weaves a complex puzzle as characters uncover a hidden conspiracy linked to a mysterious cave and a nuclear power plant. Themes of love, betrayal, and existential questions about free will and determinism are central to the story. With its dark atmosphere, intricate storytelling, and stunning visuals, Dark captivates viewers as one of Netflix’s most ambitious series. It challenges audiences to unravel its mysteries while contemplating the cyclical nature of time.')
+                                                                updateWatchLink(this)">
+                <img src="image/dark-carousel.png" alt="image">
+              </div>
+              <div class="carousel-item" data-watch="https://www.netflix.com/in/title/70301870"
+                                          onclick="changeContent( 'vikings-bg-5.jpg',
+                                                                  'image/viking-title-1-Photoroom.png',
+                                                                  'video/vikings-trailer.mp4',
+                                                                  '2013',
+                                                                  '8.5 / 10',
+                                                                  '6 Seasons',
+                                                                  'Historical Epic',
+                                                                  'Vikings is a historical drama series that brings to life the legendary tales of Norse hero Ragnar Lothbrok and his descendants. Created by Michael Hirst, the show explores the brutal and adventurous lives of Viking warriors, farmers, and explorers as they raid, conquer, and expand their influence across Europe. The series delves into themes of ambition, betrayal, loyalty, and family, set against a backdrop of Norse mythology and culture.Ragnar’s journey begins as a farmer who rises to fame through his daring raids on England and his pursuit of greater power. The story later shifts focus to his sons, including Bjorn Ironside, Ivar the Boneless, and Ubbe, who strive to carve their own legacies. Vikings is celebrated for its epic battles, stunning cinematography, and complex characters, blending history with myth to create a captivating narrative about one of historys most fascinating warrior cultures.')
+                                                                   updateWatchLink(this)">
+                <img src="image/vikings-carousel.jpg" alt="image">
+              </div>
+              <div class="carousel-item" data-watch="https://www.jiocinema.com/tv-shows/chernobyl/3739488"
+                                          onclick="changeContent( 'chernobyl-bg.jpg',
+                                                                  'image/chernobyl-title-2-Photoroom.png',
+                                                                  'video/chernobyl-trailer.mp4',
+                                                                  '2019',
+                                                                  '9.3 / 10',
+                                                                  '1 Season',
+                                                                  'Disaster',
+                                                                  'Chernobyl is a critically acclaimed historical drama miniseries that recounts the catastrophic nuclear disaster of April 26, 1986, in the Soviet Union. Created by Craig Mazin, the series delves into the events surrounding the explosion at Reactor 4 of the Chernobyl Nuclear Power Plant in Pripyat, Ukraine. The story intricately follows the heroic efforts of scientists, firefighters, and ordinary citizens who risked their lives to contain the fallout and prevent an even greater catastrophe. At its core, the series examines the devastating human and environmental consequences of the disaster while exploring themes of government cover-ups, systemic failures, and the cost of truth in a regime that prioritized secrecy over safety.The narrative focuses on the perspectives of key individuals, such as Valery Legasov, a Soviet scientist who played a pivotal role in investigating the incident, and Lyudmilla Ignatenko, the wife of a first responder whose personal tragedy highlights the disasters human toll.')
+                                                                   updateWatchLink(this)">
+                <img src="image/chernobyl-carousel.jpeg" alt="image">
+              </div>
+              <div class="carousel-item" data-watch="https://www.netflix.com/in/title/80002479"
+                                          onclick="changeContent('peaky-blinders-bg-1.jpg',
+                                                                  'image/peaky-blinders-title.png',
+                                                                  'video/peaky-blinder-trailer.mp4',
+                                                                  '2013',
+                                                                  '8.7 / 10',
+                                                                  '6 Seasons',
+                                                                  'period drama',
+                                                                  'Peaky Blinders is a crime drama centred on a family of mixed Irish Traveller and Romani origins based in Birmingham, England, starting in 1919, several months after the end of the First World War. It centres on the Peaky Blinders street gang and their ambitious, cunning crime boss Tommy Shelby. The gang comes to the attention of Major Chester Campbell, a detective chief inspector in the Royal Irish Constabulary sent by Winston Churchill from Belfast, where he had been sent to clean up the city of the Irish Republican Army flying columns, the Communist Party of Great Britain, street gangs, and common criminals. Winston Churchill charges him with suppressing disorder and uprising in Birmingham and recovering a stolen cache of arms and ammunition meant to be shipped to Libya.')
+                                                                  updateWatchLink(this)">
+                <img src="image/peaky-blinders-carousel.webp" alt="image">
+              </div>
+              <div class="carousel-item" data-watch="https://www.netflix.com/in/title/80057281"
+                                          onclick="changeContent( 'stranger-things-bg.png',
+                                                                  'image/stranger-things-title-Photoroom.png',
+                                                                  'video/stranger-things-trailer.mp4',
+                                                                  '2016',
+                                                                  '8.7 / 10',
+                                                                  '5 Seasons',
+                                                                  'Mystery',
+                                                                  'Stranger Things is set in the fictional rural town of Hawkins, Indiana, in the 1980s. The nearby Hawkins National Laboratory ostensibly performs scientific research for the United States Department of Energy but also secretly experiments with the paranormal and supernatural, sometimes with human test subjects. They have inadvertently created a portal to an alternate dimension they refer to as the Upside Down, whose presence begins to affect the residents of Hawkins in unusual ways.The first season begins in November 1983 when Will Byers is abducted by a creature from the Upside Down. His mother Joyce, Police Chief Jim Hopper, and a group of volunteers search for him. A young psychokinetic girl named Eleven escapes from the laboratory and is found by friends of Will. Eleven befriends and assists them in their efforts to find Will')
+                                                                   updateWatchLink(this)">
+                <img src="image/stranger-things-carousel-1.png" alt="image">
+              </div>
+              <div class="carousel-item" data-watch="https://www.jiocinema.com/tv-shows/house-of-the-dragon/3740000" 
+                                            onclick="changeContent('hod-bg-1.jpg',
+                                                                    'image/hod-title.png',
+                                                                    'video/hod-trailer.mp4',
+                                                                    '2022',
+                                                                    '8.3 / 10',
+                                                                    '2 Seasons',
+                                                                    'Fantasy Epic',
+                                                                    'House of the Dragon is a prequel to Game of Thrones, based on George R.R. Martins books and novellas.t follows the Targaryen dynasty, the dragon-riding rulers of Westeros, two centuries before the main series.The main conflict is the Dance of the Dragons, a bloody civil war between two rival branches of the family over the Iron Throne.Princess Rhaenyra, the kings chosen heir, faces off against her half-brother Aegon II, who has the support of his mother and some powerful lords.The war involves dragon battles, betrayals, murders, and madness, as the realm is torn apart by the competing claims and ambitions.The show promises to explore the history, culture, and politics of the Targaryen era, as well as the secrets and mysteries of the dragons.')
+                                                                    updateWatchLink(this)">
+                <img src="image/hod-carousel-1.jpeg" alt="image">
+              </div>
+          </div>
+        </div>  
+          <a href="#" class="play" onclick="toggleVideo();"><i class="icon ri-play-circle-line">watch Trailer</i></a>
+          <ul class="sci">
+            <li><a href="#"><i class="icon ri-facebook-fill"></i></a></li>
+            <li><a href="#"><i class="icon ri-instagram-line"></i></a></li>
+            <li><a href="#"><i class="icon ri-twitter-x-line"></i></a></li>
+          </ul>
+    </div>
+    <div class="trailer">
+      <video src="video/witcher-trailer.mp4" controls></video>
+      <img src="image/close.jpeg" class="close" alt="close-image" onclick="toggleVideo();">
+    </div>
+
+   <script src="https://code.jquery.com/jquery-3.7.1.js" ></script>  <!-- This includes the jQuery library, which provides a simplified way to manipulate the DOM, handle events, and work with animations. -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> <!-- This includes the Materialize CSS framework's JavaScript library, which provides pre-designed components like carousel -->
+   <script src="index.js"></script>
+
+      <!-- * why this => Ensures the carousel component from Materialize is activated after the page has fully loaded.Relies on jQuery for DOM manipulation and Materialize for the carousel functionality. -->
+   <script>
+      $(document).ready(function(){  // This is a jQuery function that ensures the code inside it runs only after the HTML document (DOM) has been fully loaded.
+      $('.carousel').carousel();  //  It allows the carousel functionality (like sliding between items) to work.
+    });
+   </script>
+</body>
+</html>
